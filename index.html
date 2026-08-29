@@ -4,45 +4,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — LG TV Remote</title>
+<meta name="description" content="Privacy Policy for the LG TV Remote Android app by BlueSpaceStudioz.">
 <style>
   :root {
-    --ink: #1a1d23;
-    --muted: #55606e;
-    --line: #e3e7ec;
-    --accent: #2f5fd6;
-    --accent-soft: #eef2fd;
     --bg: #ffffff;
-    --bg-alt: #f7f9fc;
-    --radius: 10px;
-    --max-w: 820px;
+    --bg-alt: #f6f7f9;
+    --text: #1c1e21;
+    --text-muted: #5b6270;
+    --border: #e3e5e9;
+    --accent: #c0392b;
+    --accent-soft: #fdecea;
+    --link: #b3261e;
+    --code-bg: #f0f1f3;
+    --shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --bg-alt: #1b1e23;
+      --text: #e8e9ec;
+      --text-muted: #9aa0ab;
+      --border: #2b2f36;
+      --accent: #e35b4f;
+      --accent-soft: #2a1917;
+      --link: #ff8a7a;
+      --code-bg: #20242b;
+      --shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+  }
+
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+
   body {
     margin: 0;
-    background: var(--bg-alt);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.65;
-    font-size: 16px;
-  }
-  .page {
-    max-width: var(--max-w);
-    margin: 0 auto;
     background: var(--bg);
-    padding: 48px 56px 72px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
-  header.hero {
-    border-bottom: 1px solid var(--line);
+
+  .wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+
+  header.doc-header {
+    border-bottom: 1px solid var(--border);
     padding-bottom: 28px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
-  header.hero .eyebrow {
+
+  header.doc-header .eyebrow {
     display: inline-block;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent);
     background: var(--accent-soft);
@@ -50,808 +69,374 @@
     border-radius: 999px;
     margin-bottom: 14px;
   }
+
   h1 {
-    font-size: 30px;
+    font-size: 1.9rem;
     margin: 0 0 8px;
     letter-spacing: -0.01em;
   }
-  .meta {
-    color: var(--muted);
-    font-size: 14.5px;
+
+  .updated {
+    color: var(--text-muted);
+    font-size: 0.92rem;
     margin: 0;
   }
-  .meta strong { color: var(--ink); }
+
+  .intro {
+    font-size: 1.02rem;
+    color: var(--text);
+  }
 
   nav.toc {
     background: var(--bg-alt);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    border-radius: 10px;
     padding: 18px 22px;
     margin: 32px 0 40px;
   }
+
   nav.toc h2 {
-    font-size: 13px;
+    font-size: 0.78rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--muted);
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
     margin: 0 0 10px;
-    font-weight: 700;
+    border: none;
+    padding: 0;
   }
+
   nav.toc ol {
-    margin: 0;
-    padding-left: 20px;
     columns: 2;
     -webkit-columns: 2;
     column-gap: 28px;
-    font-size: 14.5px;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.92rem;
   }
-  nav.toc li { margin-bottom: 6px; break-inside: avoid; }
-  nav.toc a { color: var(--accent); text-decoration: none; }
-  nav.toc a:hover { text-decoration: underline; }
 
-  section { margin: 40px 0; scroll-margin-top: 20px; }
-  section h2 {
-    font-size: 20px;
-    margin: 0 0 14px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--accent-soft);
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
+  nav.toc li { break-inside: avoid; margin-bottom: 6px; }
+  nav.toc a { color: var(--text); text-decoration: none; }
+  nav.toc a:hover { color: var(--link); text-decoration: underline; }
+
+  h2 {
+    font-size: 1.28rem;
+    margin: 44px 0 14px;
+    padding-top: 6px;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 20px;
   }
-  section h2 .num {
+
+  section:first-of-type h2 { border-top: none; margin-top: 0; }
+
+  h2 .num {
     color: var(--accent);
+    margin-right: 8px;
     font-variant-numeric: tabular-nums;
-    font-size: 15px;
-    font-weight: 700;
   }
-  section h3 {
-    font-size: 16px;
-    margin: 22px 0 8px;
-    color: var(--ink);
+
+  h3 {
+    font-size: 1.02rem;
+    margin: 24px 0 8px;
+    scroll-margin-top: 20px;
   }
-  p { margin: 0 0 14px; color: #2a2f37; }
-  ul, ol.plain { margin: 0 0 14px; padding-left: 22px; }
-  li { margin-bottom: 6px; color: #2a2f37; }
-  strong { color: var(--ink); }
+
+  p { margin: 12px 0; }
+
+  a { color: var(--link); }
+
+  strong { font-weight: 650; }
+
+  ul, ol.plain { margin: 12px 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+
+  code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.88em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
 
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 12px 0 20px;
-    font-size: 14.5px;
+    margin: 16px 0;
+    font-size: 0.92rem;
     display: block;
     overflow-x: auto;
+    white-space: normal;
   }
-  th, td {
+
+  thead th {
     text-align: left;
-    padding: 10px 12px;
-    border: 1px solid var(--line);
-    vertical-align: top;
-  }
-  th {
     background: var(--bg-alt);
-    font-size: 13px;
+    border-bottom: 2px solid var(--border);
+    padding: 10px 12px;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: var(--muted);
+    color: var(--text-muted);
     white-space: nowrap;
   }
-  tr:nth-child(even) td { background: #fbfcfe; }
+
+  tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
 
   .callout {
-    background: var(--accent-soft);
-    border-left: 4px solid var(--accent);
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
     border-radius: 6px;
     padding: 14px 18px;
-    margin: 16px 0;
-    font-size: 15px;
-  }
-  .callout.warn {
-    background: #fff6e9;
-    border-left-color: #d98c1f;
-  }
-  .callout.status {
-    background: #eafaf0;
-    border-left-color: #1f9d55;
-  }
-  a { color: var(--accent); }
-  code {
-    background: var(--bg-alt);
-    padding: 1px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  }
-  footer {
-    margin-top: 56px;
-    padding-top: 24px;
-    border-top: 1px solid var(--line);
-    color: var(--muted);
-    font-size: 13.5px;
-    text-align: center;
-  }
-  .back-top {
-    display: inline-block;
-    margin-top: 8px;
-    font-size: 13px;
+    margin: 18px 0;
+    font-size: 0.94rem;
   }
 
-  @media (max-width: 640px) {
-    .page { padding: 32px 22px 56px; }
-    h1 { font-size: 24px; }
+  .contact-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-top: 14px;
+  }
+
+  .contact-card a { font-weight: 600; }
+
+  footer.appendix {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  footer.appendix h2 {
+    border: none;
+    padding: 0;
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  footer.appendix ul { font-size: 0.88rem; color: var(--text-muted); }
+  footer.appendix li { margin: 8px 0; }
+
+  .back-to-top {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .back-to-top:hover { color: var(--link); }
+
+  @media (max-width: 560px) {
     nav.toc ol { columns: 1; }
+    .wrap { padding: 32px 16px 64px; }
+    h1 { font-size: 1.55rem; }
   }
 </style>
 </head>
 <body>
-<div class="page">
+<div class="wrap">
 
-  <header class="hero">
+  <header class="doc-header" id="top">
     <span class="eyebrow">Privacy Policy</span>
     <h1>LG TV Remote</h1>
-    <p class="meta">
-      Published by <strong>BlueSpaceStudioz</strong> &nbsp;·&nbsp;
-      Last updated: <strong>August 29, 2026</strong> &nbsp;·&nbsp;
-      Effective for package <code>com.bluespacestudioz.lgtvremote</code>
-    </p>
+    <p class="updated">Last updated: August 29, 2026</p>
   </header>
 
-  <p>
-    This Privacy Policy explains how <strong>BlueSpaceStudioz</strong> ("we", "us", "our")
-    handles information in connection with the <strong>LG TV Remote</strong> Android
-    application (the "App"). We built LG TV Remote to turn your phone into a remote control
-    for smart TVs and streaming devices on your local network, and to let you cast photos,
-    videos, and IPTV channels to those devices. This policy describes what data the App
-    accesses, what stays on your device, what is shared with diagnostic and (currently
-    inactive) advertising partners, and the choices you have.
-  </p>
-  <p>
-    Please read this policy carefully. By installing or using the App, you agree to the
-    practices described here. If you do not agree, please do not use the App.
-  </p>
+  <p class="intro">This Privacy Policy describes how the <strong>LG TV Remote</strong> Android application (the "App"), developed by <strong>BlueSpaceStudioz</strong> ("we", "us", "our"), collects, uses, and discloses information when you use the App.</p>
 
-  <nav class="toc">
-    <h2>Contents</h2>
+  <nav class="toc" aria-label="Table of contents">
+    <h2>On this page</h2>
     <ol>
-      <li><a href="#overview">App overview &amp; scope</a></li>
-      <li><a href="#local-data">Data stored locally on your device</a></li>
-      <li><a href="#casting">Casting, screen mirroring &amp; IPTV playlists</a></li>
-      <li><a href="#support-chat">In-app support chat</a></li>
-      <li><a href="#permissions">Permissions the App requests</a></li>
-      <li><a href="#advertising">Advertising &amp; the Advertising ID</a></li>
-      <li><a href="#diagnostics">Crash reporting &amp; analytics (Firebase)</a></li>
-      <li><a href="#third-parties">Third-party service providers</a></li>
-      <li><a href="#consent">Your consent choices (GDPR / UK / US)</a></li>
-      <li><a href="#no-account">No accounts, no app-specific server</a></li>
-      <li><a href="#retention">Data retention &amp; deletion</a></li>
-      <li><a href="#children">Children's privacy</a></li>
-      <li><a href="#security">Security</a></li>
-      <li><a href="#rights">Your rights (GDPR, CCPA &amp; other state laws)</a></li>
-      <li><a href="#transfers">International data transfers</a></li>
-      <li><a href="#changes">Changes to this policy</a></li>
-      <li><a href="#contact">Contact us</a></li>
+      <li><a href="#what-the-app-does">1. What This App Does</a></li>
+      <li><a href="#info-collected">2. Information Collected Automatically</a></li>
+      <li><a href="#local-network">3. Local Network &amp; On-Device Processing</a></li>
+      <li><a href="#permissions">4. Permissions Used</a></li>
+      <li><a href="#support-chat">5. Support Chat</a></li>
+      <li><a href="#advertising">6. Advertising</a></li>
+      <li><a href="#third-party">7. Third-Party Services</a></li>
+      <li><a href="#coppa">8. Children's Privacy (COPPA)</a></li>
+      <li><a href="#gdpr">9. GDPR (EU/EEA Users)</a></li>
+      <li><a href="#ccpa">10. CCPA/CPRA (California Users)</a></li>
+      <li><a href="#retention">11. Data Retention</a></li>
+      <li><a href="#security">12. Data Security</a></li>
+      <li><a href="#transfers">13. International Data Transfers</a></li>
+      <li><a href="#changes">14. Changes to This Policy</a></li>
+      <li><a href="#contact">15. Contact Us</a></li>
     </ol>
   </nav>
 
-  <section id="overview">
-    <h2><span class="num">1.</span> App overview &amp; scope</h2>
-    <p>
-      LG TV Remote discovers and controls televisions and streaming devices — including
-      LG (webOS), Samsung (Tizen), Roku, Apple TV, Android TV/Google TV, Vizio, Philips, and
-      generic DLNA/UPnP devices — over your <strong>local Wi-Fi network</strong>. All
-      remote-control communication (button presses, pairing PINs, volume commands, app-launch
-      requests, air-mouse pointer movement) happens directly between your phone and your TV
-      on your own network. We do not operate a server that receives, stores, or relays your
-      TV control commands. The App can also send a <strong>Wake-on-LAN</strong> signal to a
-      saved TV's stored MAC address to power it on remotely over your local network.
-    </p>
-    <p>
-      The App also lets you <strong>cast photos, videos, and IPTV channels</strong> from your
-      phone to supported TVs — via Google Cast (Chromecast/Google TV), DLNA, AirPlay, or a
-      temporary local streaming link the App creates on your own Wi-Fi network — and offers a
-      <strong>screen mirroring</strong> shortcut into your phone's own OS mirroring feature.
-      Section 3 explains exactly how these work and what stays on your device. Section 4
-      explains our optional <strong>in-app support chat</strong>, the one feature in the App
-      that sends data to a database we can access.
-    </p>
-    <p>
-      The App includes the Google AdMob and Unity Ads SDKs for showing advertisements, and
-      Firebase Crashlytics, Google Analytics for Firebase, and Firebase Remote Config for
-      diagnostics and update management. <strong>As of this version, ads are switched off
-      app-wide</strong>, and — because of how the ad and analytics SDKs are linked together —
-      this currently also means the App's analytics collection does not run either. Sections
-      6 and 7 explain exactly what that means and what each SDK is built to collect if/when
-      re-enabled.
-    </p>
+  <section id="what-the-app-does">
+    <h2><span class="num">1.</span>What This App Does</h2>
+    <p>LG TV Remote turns your phone into a remote control for smart TVs and media receivers on your local Wi-Fi network. It discovers TVs and Cast/DLNA receivers over your local network (LG webOS, Samsung Tizen, Roku, Apple TV, Android TV/Google TV, Vizio, Philips, and generic DLNA/UPnP devices), connects to them directly over your LAN to send remote-control commands (power, volume, navigation, app launch, air-mouse pointer control), lets you cast locally-picked photos/videos or IPTV playlists to a receiver, and includes an in-app support chat, ad-supported free access, and Google Play in-app update checks.</p>
+    <p>The App does <strong>not</strong> require you to create an account, and does not ask for your name, email address, or phone number to use its core remote-control features.</p>
   </section>
 
-  <section id="local-data">
-    <h2><span class="num">2.</span> Data stored locally on your device</h2>
-    <p>
-      To remember your TVs, casting targets, and playlists between sessions, the App
-      maintains a local database and local preference store (Android's Room and DataStore
-      libraries) stored entirely within the App's private storage on your device. This data
-      is <strong>never transmitted to us</strong>, and is never sent to Firebase or our
-      advertising partners either — we have no backend server for it and no access to it. It
-      is also explicitly excluded from Android's automatic cloud backup and device-to-device
-      transfer, including the pairing tokens and TLS certificate pins described below. It
-      includes:
-    </p>
-    <div class="callout">
-      <strong>One exception, and only if you start a support chat.</strong> If you choose to
-      message us in the App (Section 4), a short summary of which TV <em>brands and
-      platforms</em> you have saved — for example "LG (webOS), Samsung" — and how many devices
-      that is, is attached to your message so we can help without asking you for it. The
-      details that identify your home are not included: no custom names or room labels you
-      typed, no IP or MAC addresses, no pairing credentials, no playlists, and no cast
-      library entries. If you never open the support chat, nothing in this section leaves
-      your device.
-    </div>
+  <section id="info-collected">
+    <h2><span class="num">2.</span>Information Collected Automatically</h2>
+
+    <h3>2.1 Analytics (Firebase Analytics)</h3>
+    <p>The App uses Firebase Analytics to understand feature usage and diagnose connectivity problems (e.g., how often device discovery succeeds, how often a TV connection fails and why, IPTV playback errors, casting activity, air-mouse performance). These events are deliberately designed to exclude personal or network-identifying information — our own engineering documentation for this logging explicitly states that auth tokens, PINs, IP addresses, MAC addresses, and device names are never included. Events instead carry non-identifying data such as: TV brand/protocol category, connection outcome, error classification, network transport type (Wi-Fi/cellular/VPN/none), app version, and a Firebase-generated analytics installation identifier.</p>
+    <p>Firebase Analytics may also automatically collect standard device/diagnostic identifiers (such as an advertising identifier, general device model, OS version, language, and approximate location derived from IP address) as part of its standard SDK behavior.</p>
+
+    <h3>2.2 Crash &amp; Diagnostic Reporting (Firebase Crashlytics)</h3>
+    <p>The App uses Firebase Crashlytics to automatically collect crash reports and diagnostic logs (device model, OS version, app version, stack traces) when the App crashes or behaves unexpectedly, to help us fix bugs.</p>
+
+    <h3>2.3 Remote Configuration (Firebase Remote Config)</h3>
+    <p>The App uses Firebase Remote Config to fetch non-personal configuration values (for example, minimum supported app version, to show update prompts). This does not involve personal data.</p>
+
+    <h3>2.4 Advertising Identifiers</h3>
+    <p>The App includes the Google AdMob and Unity Ads SDKs, along with the Google User Messaging Platform (UMP) consent SDK, for showing ads (see Section 6). <strong>Ads are currently switched off app-wide</strong> &mdash; the App does not initialize these ad SDKs and they do not run or collect any data in the current version. This section and Section 6 describe what would happen, and the data these SDKs are capable of collecting (advertising identifier, device/app information, general IP-based location), if and when ads are turned back on in a future version, without requiring you to install an update to see this disclosure take effect.</p>
+  </section>
+
+  <section id="local-network">
+    <h2><span class="num">3.</span>Local Network &amp; On-Device Processing</h2>
+    <p>Most of what this App does happens entirely on your device or directly between your device and your TV, over your own local Wi-Fi network, and never reaches any server we control:</p>
     <ul>
-      <li><strong>Device identifiers:</strong> local IP addresses, MAC addresses (used only to
-        send a Wake-on-LAN signal), device model, and any custom name you assign to a saved
-        TV. These labels are stored only so you can recognise your own devices in the App and
-        stay on your device.</li>
-      <li><strong>Pairing credentials:</strong> pairing tokens, client certificates, TLS
-        certificate pins, and session keys issued by your TV during pairing (e.g. LG webOS,
-        Android TV, Samsung, Vizio, Philips), stored so you don't have to re-pair every time.</li>
-      <li><strong>IPTV playlists you add:</strong> the name you give a playlist, its source
-        (a direct M3U/M3U8 URL, or an Xtream Codes login resolved to a playlist URL), and the
-        resulting list of channel names, logos, and stream links. See Section 3 for an
-        important note about Xtream Codes credentials.</li>
-      <li><strong>Cast library:</strong> if you cast a photo or video from your phone, the App
-        remembers a reference to it (the file's content link, display name, and file type) so
-        it reappears in your cast library next time — the file itself is never copied or
-        duplicated by the App.</li>
-      <li><strong>App preferences:</strong> your selected language, theme/appearance, and
-        onboarding/tutorial completion status.</li>
-    </ul>
-    <p>
-      All of the above is removed automatically if you uninstall the App, or manually if you
-      remove individual saved devices, playlists, or cast library items from within the App,
-      or clear the App's storage via Android's system Settings.
-    </p>
-  </section>
-
-  <section id="casting">
-    <h2><span class="num">3.</span> Casting, screen mirroring &amp; IPTV playlists</h2>
-    <h3>Casting photos and videos</h3>
-    <p>
-      When you choose to cast a photo or video, the App uses Android's system photo/video
-      picker to let you select it — the App is never granted broad access to your photo
-      library or storage, only to the specific item(s) you pick. To deliver that file to a TV
-      that can't read it directly from your phone (Chromecast/Google TV, DLNA, and some
-      AirPlay scenarios), the App briefly runs a small local web server bound to your phone's
-      own Wi-Fi address, so the TV can fetch the file over your local network. This server is
-      only reachable on your local Wi-Fi network and is not exposed to the internet.
-    </p>
-    <h3>Casting to Chromecast/Google TV, DLNA, and AirPlay devices</h3>
-    <p>
-      The App uses the <strong>Google Cast SDK</strong> (part of Google Play services) to
-      discover Chromecast/Google TV-enabled devices on your network and to start, control, and
-      end casting sessions. It also discovers and casts to <strong>DLNA</strong>-compatible
-      devices and <strong>AirPlay</strong> (Apple TV) receivers using the same local-network
-      discovery and communication described in Section 1 — no separate account or server is
-      involved. Discovering cast targets and controlling playback happens directly between
-      your phone and the receiving device on your local network.
-    </p>
-    <h3>Screen mirroring</h3>
-    <p>
-      Screen mirroring hands off to your phone's own OS-level mirroring/casting surface (or,
-      on devices without one, a generic system settings screen) to send your display to a
-      supported TV. This does not route through us or through Firebase.
-    </p>
-    <h3>IPTV playlists</h3>
-    <p>
-      The App lets you add your own IPTV source — either a direct M3U/M3U8 playlist URL, or an
-      Xtream Codes login (server address, username, and password), which the App resolves into
-      a playlist URL for you. <strong>No channel content ships with the App; every playlist is
-      one you supply.</strong>
-    </p>
-    <div class="callout warn">
-      <strong>Important:</strong> for Xtream Codes-style logins, the resolved playlist URL
-      contains your username and password as part of the URL itself. This URL is stored only
-      in the App's private local storage on your device (Section 2), and is used only to fetch
-      your channel list and stream video directly from your IPTV provider — it is
-      <strong>never sent to us, to Firebase, or to any advertising partner</strong>. If you
-      remove the playlist from the App, this stored URL and its credentials are deleted with
-      it. Because this URL contains a password, treat sharing your device backup or screenshots
-      of the App's playlist screen with the same care you would treat sharing that password
-      directly.
-    </div>
-    <p>
-      When you play or cast a channel, the App may log which streaming format was used (for
-      example "HLS" or "DASH") for diagnostic purposes — never the playlist URL, login
-      credentials, or channel names themselves. See Section 7 for the current status of this
-      logging.
-    </p>
-    <h3>Voice input</h3>
-    <p>
-      The App's microphone button hands off to your device's built-in speech-recognition
-      system via Android's standard <code>RecognizerIntent</code>. Audio is captured and
-      processed by your phone's own default assistant/speech-recognition app — not by this
-      App — and is not sent to us.
-    </p>
-  </section>
-
-  <section id="support-chat">
-    <h2><span class="num">4.</span> In-app support chat</h2>
-    <p>
-      The App includes an in-app chat so you can report a problem or ask a question without
-      leaving the App, creating an account, or sending an email. This is the
-      <strong>one feature in the App that sends data to a database we can read</strong> —
-      every other section of this policy describes data that stays on your device or goes
-      only to Google. When you send a message in the chat:
-    </p>
-    <ul>
-      <li>The text you type is sent to and stored in <strong>Cloud Firestore</strong>, a Google
-        Firebase database, under a conversation identified only by an
-        <strong>anonymous, device-scoped identity</strong> created automatically via
-        <strong>Firebase Authentication (Anonymous)</strong> — you are never asked to sign in
-        or provide your name or email address to use it. Reinstalling the App creates a new
-        anonymous identity and a fresh, unlinked conversation.</li>
-      <li>A short technical snapshot is attached to your message, so a report like "my TV
-        won't connect" arrives with the context needed to answer it: your phone's
-        manufacturer/model and Android version, the App's version, which TV
-        <strong>brands and platforms</strong> you have saved and how many (never their names,
-        IP, or MAC addresses), what kind of network your phone is on right now and whether
-        something is blocking discovery (airplane mode, Wi-Fi off, a VPN — never a Wi-Fi
-        name, password, or IP address), your device's language/region setting, how many days
-        ago the App was installed, and your app's <strong>Firebase Analytics instance
-        ID</strong> (used only to look up your own device's diagnostic events for this
-        conversation, per Section 7 — not your name, email, or phone number). Pairing
-        credentials, PINs, IPTV playlists/logins, and cast library entries are never
-        included.</li>
-      <li>While you have the chat screen open, our support staff can request a
-        <strong>refreshed copy of that same snapshot</strong> so they can see the current
-        state of a problem rather than the state when you last typed. It refreshes only the
-        fields listed above, and never your message text or anything not already listed
-        here.</li>
-      <li>While handling your conversation, our support staff may add internal notes and
-        category tags to it (for example "pairing" or "bug"). These are our own working
-        notes, are stored separately so the App can never read them back to you, and are
-        deleted together with the conversation (Section 11).</li>
-      <li>Messages are capped in length, and the App and our backend both rate-limit how
-        quickly messages can be sent, to keep the chat usable and deter automated abuse. If a
-        conversation is used abusively, we may block it — a blocked conversation's messages
-        stay only on your device and are never delivered to us, so the App's own behavior
-        looks unchanged to you.</li>
-      <li>Your messages are visible to our support staff through an access-restricted internal
-        tool. They are not publicly accessible, are not used for advertising, and are not
-        shared with our advertising partners (Section 6).</li>
-      <li>Once a conversation is closed by our support staff, it and its full message history
-        are scheduled for <strong>automatic deletion after 7 days</strong>. If you (or we) send
-        another message before that window elapses, the scheduled deletion is cancelled and the
-        conversation continues normally. A conversation we haven't closed persists until we
-        do. In cases where sensitive content is pasted into a chat by mistake (for example a
-        phone number or an unrelated account detail), we can also delete a specific message or
-        the whole conversation immediately, ahead of that schedule.</li>
-      <li>If you'd rather not use the chat, the "Prefer email?" option inside it opens your
-        device's email app addressed to our support inbox instead — nothing is sent until you
-        choose to send that email yourself.</li>
+      <li><strong>Device discovery</strong> uses standard local-network discovery protocols — SSDP, mDNS/NSD, and DLNA/UPnP — broadcast on your local Wi-Fi network only. This traffic never leaves your LAN and is never sent to us.</li>
+      <li><strong>TV control</strong> (remote-control button presses, air-mouse pointer movement, app launching, input switching) connects directly from your phone to your TV's IP address over your local network (e.g., WebSocket to LG webOS, HTTP to Roku/Apple TV, DLNA/UPnP commands). We do not operate, and this traffic never passes through, any server of ours.</li>
+      <li><strong>Saved devices</strong> (TV name, IP/MAC address, pairing/auth tokens, TLS certificate pins) are stored <strong>only</strong> in a local database on your device. This data is explicitly excluded from Android cloud backup and device-to-device transfer, and is deleted when you uninstall the App or remove the device in-app. It is never uploaded to us.</li>
+      <li><strong>Casting and local media streaming</strong>: when you cast a locally-picked photo, video, or IPTV stream to a TV/Cast receiver, the App runs a small local HTTP server on your phone (via NanoHTTPD) solely so your TV can fetch that file over your LAN. This server is only reachable on your local network and is not accessible over the internet.</li>
+      <li><strong>IPTV playlists</strong>: if you add an IPTV playlist (M3U URL or Xtream login), your device connects directly to the URL/provider you supply to fetch the playlist and streams; we do not proxy, store, or see this content or your provider credentials.</li>
+      <li><strong>Voice input</strong>: the microphone button hands off to your device's built-in speech-recognition system (via Android's <code>RecognizerIntent</code>). Audio is captured and processed by your phone's default assistant/speech-recognition app, not by this App, and is not sent to us.</li>
     </ul>
   </section>
 
   <section id="permissions">
-    <h2><span class="num">5.</span> Permissions the App requests</h2>
-    <p>The table below lists every permission LG TV Remote declares and why it's needed.</p>
+    <h2><span class="num">4.</span>Permissions Used</h2>
     <table>
       <thead>
         <tr><th>Permission</th><th>Purpose</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
-          <td>Communicate with TVs and casting targets over your local network, fetch IPTV
-              playlists/streams you've added, and send/receive in-app support chat messages
-              (Section 4). (Loading ads and syncing analytics/crash data would also use this,
-              once/if that becomes active again — see Sections 6–7.)</td>
-        </tr>
-        <tr>
-          <td><code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code></td>
-          <td>Required to acquire a multicast lock so the App can receive mDNS/SSDP discovery
-              broadcasts from TVs and casting targets on your Wi-Fi network. Without this,
-              Android silently drops the packets used to detect nearby devices.</td>
-        </tr>
-        <tr>
-          <td><code>WAKE_LOCK</code></td>
-          <td>Keeps the Wi-Fi radio active during an active TV session (via a Wi-Fi lock) so the
-              connection doesn't miss keep-alive pings and drop. This does not keep your screen on
-              or your CPU awake.</td>
-        </tr>
-        <tr>
-          <td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_CONNECTED_DEVICE</code></td>
-          <td>Keeps an active connection to your TV alive while the App is minimized, so remote
-              commands keep working and your TV doesn't disconnect.</td>
-        </tr>
-        <tr>
-          <td><code>POST_NOTIFICATIONS</code> (Android 13+)</td>
-          <td>Shows the persistent "connected to [TV name]" notification with lock-screen remote
-              controls; requested once at runtime.</td>
-        </tr>
-        <tr>
-          <td><code>RECEIVE_BOOT_COMPLETED</code></td>
-          <td>Restores the Quick Settings tile and connection state after your phone restarts.</td>
-        </tr>
-        <tr>
-          <td><code>com.google.android.gms.permission.AD_ID</code>,<br><code>ACCESS_ADSERVICES_AD_ID</code></td>
-          <td>Auto-declared by the bundled Google Mobile Ads, Unity Ads, and Firebase Analytics
-              SDKs to allow access to the Android Advertising ID for ad delivery and
-              measurement, if/when those SDKs are active. See Sections 6–7 for their current
-              status.</td>
-        </tr>
+        <tr><td><code>INTERNET</code></td><td>Communicate with your TV over the local network, load ads, and sync analytics/crash/support data.</td></tr>
+        <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Detect network type/connectivity to diagnose and guide you through connection issues.</td></tr>
+        <tr><td><code>ACCESS_WIFI_STATE</code></td><td>Read Wi-Fi connection state needed for local device discovery.</td></tr>
+        <tr><td><code>CHANGE_WIFI_MULTICAST_STATE</code></td><td>Acquire a multicast lock so your phone can receive SSDP/mDNS discovery broadcasts from TVs (Android otherwise drops multicast packets to save battery).</td></tr>
+        <tr><td><code>WAKE_LOCK</code></td><td>Keep the Wi-Fi radio active during an active TV session so the connection isn't dropped by power-saving; does not keep the CPU/screen awake.</td></tr>
+        <tr><td><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_CONNECTED_DEVICE</code></td><td>Keep the connection to your TV alive with a persistent notification when the App is minimized.</td></tr>
+        <tr><td><code>POST_NOTIFICATIONS</code> (Android 13+)</td><td>Show the required foreground-service notification (and optional lock-screen remote-control buttons); requested once at runtime.</td></tr>
+        <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Restore the Quick Settings remote tile and connection state after your phone restarts.</td></tr>
       </tbody>
     </table>
-    <div class="callout">
-      LG TV Remote does <strong>not</strong> request Camera, Microphone (<code>RECORD_AUDIO</code>),
-      Location, Contacts, or broad Photos/Videos/Storage permissions. Local device discovery
-      uses network service discovery (mDNS/SSDP/DLNA) and does not require location access;
-      voice input (Section 3) delegates to your phone's system speech recognizer rather than
-      recording audio itself; and casting a photo or video (Section 3) uses Android's system
-      photo/video picker, which gives the App access only to the specific item you select —
-      not a standing permission to your media library.
-    </div>
+    <div class="callout">The App does <strong>not</strong> request Camera, Microphone (<code>RECORD_AUDIO</code>), or any location permission (<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code> / <code>NEARBY_WIFI_DEVICES</code>) — device discovery on this App's supported Android versions does not require them.</div>
+  </section>
+
+  <section id="support-chat">
+    <h2><span class="num">5.</span>Support Chat</h2>
+    <p>The App includes an in-app support chat (Firebase Authentication + Cloud Firestore). When you open or use support chat:</p>
+    <ul>
+      <li>An <strong>anonymous</strong> Firebase Authentication identity is created for your install (no name, email, or password required or collected for this).</li>
+      <li>Your messages are stored in a Firestore document tied to that anonymous ID, so our support team can read and reply to your thread.</li>
+      <li>To help us answer your question without back-and-forth, the App automatically attaches basic technical context to your thread: device manufacturer/model, Android version, app version, a summary of TV brand types you have saved (never IP/MAC addresses or device names), current network type and any detected connectivity issue, your device's language setting, how many days since install, and the Firebase Analytics instance ID (used only to correlate your ticket with the anonymized usage funnel described in Section 2.1, for troubleshooting).</li>
+      <li>If you instead choose to email us, your message and email address are sent directly via your phone's own email app to our support address below and are not otherwise stored by us.</li>
+    </ul>
   </section>
 
   <section id="advertising">
-    <h2><span class="num">6.</span> Advertising &amp; the Advertising ID</h2>
-    <div class="callout status">
-      <strong>Current status: ads are disabled.</strong> As of this version, the App does not
-      initialize the Google Mobile Ads SDK, does not show any ads, and does not offer any
-      in-app purchase — the App is currently free with no monetization active. The rest of
-      this section is a forward-looking disclosure of what the App is built to do if ads are
-      re-enabled in a future release.
-    </div>
-    <p>
-      If enabled, the App would be supported by ads delivered through <strong>Google
-      AdMob</strong>, with <strong>Unity Ads</strong> as a mediated demand partner within the
-      same ad units. Depending on your settings and region, showing ads would involve the
-      following being shared with Google and Unity:
-    </p>
+    <h2><span class="num">6.</span>Advertising</h2>
+    <div class="callout"><strong>Current status: ads are disabled.</strong> As of this version, the App does not show any ads and does not initialize any advertising SDK. The App is currently free with no ads and no in-app purchases. The rest of this section is a forward-looking disclosure of what the App is built to do if ads are re-enabled in a future release &mdash; so you're informed in advance rather than only after an update changes behavior.</div>
+    <p>If enabled, the App would be supported by ads shown via <strong>Google AdMob</strong>, with <strong>Unity Ads</strong> as a mediation partner, using the <strong>Google User Messaging Platform (UMP)</strong> to manage consent (including GDPR/EEA consent prompts and, where applicable, an "AdChoices" opt-out). These partners may collect your advertising identifier and other device data to select, serve, and measure ads, and may set/read identifiers for that purpose.</p>
+    <p><strong>Your choices:</strong></p>
     <ul>
-      <li>Your device's <strong>Advertising ID</strong> (a resettable, non-permanent identifier —
-        not your name, email, or phone number).</li>
-      <li>Coarse device and app information (device model, OS version, app version, language,
-        general/coarse location derived from IP address) used for ad targeting and fraud
-        prevention.</li>
-      <li>Ad interaction data (impressions, clicks) used for measurement.</li>
+      <li>On first launch in the EEA/UK (and elsewhere where required), a consent prompt lets you manage ad personalization choices via the UMP dialog.</li>
+      <li>You can reset or limit your advertising identifier, or opt out of personalized/interest-based ads generally, in your device's Settings (Google Settings → Ads, or Settings → Privacy → Ads on newer Android versions).</li>
+      <li>Google AdMob: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></li>
+      <li>Unity Ads: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">unity.com/legal/game-player-and-app-user-privacy-policy</a></li>
     </ul>
-    <p>
-      The App is built to show three ad formats — banner, interstitial (full-screen), and
-      app-open ads — with an interstitial cadence designed to wait for a meaningful amount of
-      active use and a short pause since your last button press before ever showing one,
-      rather than interrupting you mid-action. None of this currently runs.
-    </p>
-    <p>
-      Even while ads are disabled, the App still runs Google's consent-gathering flow (the
-      User Messaging Platform, or UMP) on first launch in regions that require it — see
-      Section 9 — so the consent infrastructure is already in place for if/when ads are
-      turned back on, without exposing you to any ads in the meantime. You can reset or opt
-      out of ad personalization generally at any time in your device's Android system
-      settings under <em>Settings → Privacy → Ads</em>.
-    </p>
+    <p>The App does not currently offer in-app purchases or subscriptions, and (per the status note above) does not currently show ads either &mdash; it is currently free with no monetization active.</p>
   </section>
 
-  <section id="diagnostics">
-    <h2><span class="num">7.</span> Crash reporting &amp; analytics (Firebase)</h2>
-    <p>
-      LG TV Remote includes <strong>Firebase Crashlytics</strong>, <strong>Google Analytics for
-      Firebase</strong>, and <strong>Firebase Remote Config</strong> (Google-owned services) to
-      help us find and fix bugs, understand app usage, and manage app updates. This is separate
-      from the advertising SDKs described in Section 6 and from the support chat described in
-      Section 4.
-    </p>
-    <div class="callout warn">
-      <strong>Analytics is currently inactive too, tied to the same switch as ads.</strong>
-      The App's build intentionally delays Google Analytics measurement until the Google
-      Mobile Ads SDK initializes — and because ads are switched off (Section 6), that
-      initialization never runs. In practice this means the custom analytics events described
-      below are not currently being collected; every logged event is silently dropped on-device.
-      <strong>Crashlytics is unaffected</strong> by this and remains active, since it
-      initializes independently at app startup.
-    </div>
-    <h3>What Crashlytics collects (active)</h3>
-    <p>
-      When the App crashes or encounters a handled (non-fatal) error, Crashlytics sends
-      Google a crash report containing the stack trace, Android OS version, device
-      manufacturer/model, and app version, plus a small set of diagnostic tags we attach
-      ourselves: the connected TV <strong>brand</strong> and <strong>protocol</strong>
-      (e.g. "Samsung", "SAMSUNG_WS"), the network <strong>port</strong> used, the current
-      <strong>connection phase</strong> (e.g. "connecting", "pairing", "sending"), an
-      error-context label, and short breadcrumb log lines describing what the app was doing
-      (e.g. "Sending KEY_VOLUP"). Our code is deliberately written to <strong>never</strong>
-      include pairing tokens/auth keys, PINs, MAC addresses, full IP addresses, certificate
-      fingerprints, or IPTV playlist URLs/credentials in this diagnostic data.
-    </p>
-    <p>
-      If you give a saved TV a custom name, that name is <strong>never</strong> uploaded to a
-      crash report — not even in part. A TV name is user-authored free text that routinely
-      carries a person's or household's name, or a room in their home (for example "Sarah's
-      Bedroom TV"), which is exactly the kind of identifying detail this diagnostic pipeline is
-      built to exclude. At most, a non-identifying "shape" of the name (whether it was left
-      blank, and roughly how long or how many non-standard characters it had) may be recorded,
-      to help distinguish "no name" from "an unusually long name caused this crash" — never the
-      name's content.
-    </p>
-    <h3>What Analytics is built to collect (currently inactive — see above)</h3>
-    <p>
-      If and when Analytics measurement is enabled, Google Analytics for Firebase would collect
-      standard usage signals automatically (app opens, sessions, engagement, device model, OS
-      version, app version, language, and country/region derived from IP address), plus our own
-      custom events covering: discovery and connection outcomes (by TV brand/protocol, never IP
-      or MAC address, pairing tokens, or PINs), pairing success/failure, remote-control command
-      counts (bucketed into ranges, not exact values), casting/DLNA/AirPlay discovery and session
-      outcomes, IPTV playlist and playback outcomes (never the playlist URL, login credentials,
-      or channel names), and app-experience events like update prompts and notification
-      permission responses. This data is designed to be used in aggregate, to understand overall
-      app health and usage trends — not to build individual user profiles or target advertising.
-    </p>
-    <div class="callout">
-      <strong>The one exception is a support conversation you started.</strong> If analytics
-      measurement is active and you message us in the App, your app's Firebase Analytics
-      instance ID is attached to that conversation (Section 4) so we can look up the events
-      above for <em>your</em> device to diagnose the specific problem you reported. We would do
-      this only for conversations you chose to start, only to answer them, and the link is
-      deleted with the conversation.
-    </div>
-    <h3>What Remote Config and In-App Updates collect (active)</h3>
-    <p>
-      On each app launch, the App fetches a small set of configuration values from
-      <strong>Firebase Remote Config</strong> — release-management flags such as the minimum
-      supported app version and the latest available version — and may prompt or guide you
-      through installing an update via the Google Play Store. These are non-personal feature
-      flags and standard Play-services update mechanics, and do not include any information
-      about your saved TVs, playlists, cast library, or pairing credentials.
-    </p>
-  </section>
-
-  <section id="third-parties">
-    <h2><span class="num">8.</span> Third-party service providers</h2>
-    <p>The App integrates the following third-party SDKs. Each operates under its own privacy policy, linked below:</p>
+  <section id="third-party">
+    <h2><span class="num">7.</span>Third-Party Services</h2>
+    <p>We only list SDKs actually integrated into the App:</p>
     <table>
       <thead>
-        <tr><th>Provider</th><th>Purpose</th><th>Status</th><th>Privacy policy</th></tr>
+        <tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Google AdMob / Google Mobile Ads SDK</td>
-          <td>Ad serving</td>
-          <td>Bundled, currently inactive</td>
-          <td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></td>
-        </tr>
-        <tr>
-          <td>Google User Messaging Platform (UMP)</td>
-          <td>Collects and manages your GDPR/UK/US consent choices for ads</td>
-          <td>Active</td>
-          <td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></td>
-        </tr>
-        <tr>
-          <td>Unity Ads (AdMob mediation partner)</td>
-          <td>Mediated ad demand</td>
-          <td>Bundled, currently inactive</td>
-          <td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">unity.com/legal/game-player-and-app-user-privacy-policy</a></td>
-        </tr>
-        <tr>
-          <td>Google Cast SDK (Google Play services)</td>
-          <td>Discovers Chromecast/Google TV devices and manages cast sessions on your local network</td>
-          <td>Active</td>
-          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td>Google Play In-App Updates</td>
-          <td>Prompts and manages update installation via the Play Store</td>
-          <td>Active</td>
-          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td>Firebase Crashlytics</td>
-          <td>Crash and non-fatal error reporting</td>
-          <td>Active</td>
-          <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
-        </tr>
-        <tr>
-          <td>Google Analytics for Firebase</td>
-          <td>App usage and engagement analytics</td>
-          <td>Bundled, currently inactive (Section 7)</td>
-          <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
-        </tr>
-        <tr>
-          <td>Firebase Remote Config</td>
-          <td>Determines whether a recommended or forced app update is required</td>
-          <td>Active</td>
-          <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
-        </tr>
-        <tr>
-          <td>Firebase Authentication (Anonymous)</td>
-          <td>Creates the anonymous, device-scoped identity behind the in-app support chat (Section 4) — no sign-in, no personal information</td>
-          <td>Active</td>
-          <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
-        </tr>
-        <tr>
-          <td>Cloud Firestore</td>
-          <td>Stores in-app support chat messages and the technical snapshot attached to them (Section 4)</td>
-          <td>Active</td>
-          <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
-        </tr>
+        <tr><td>Google Firebase Analytics</td><td>App usage analytics</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+        <tr><td>Google Firebase Crashlytics</td><td>Crash reporting</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+        <tr><td>Google Firebase Remote Config</td><td>Remote feature/version configuration</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+        <tr><td>Google Firebase Authentication (anonymous)</td><td>Anonymous identity for support chat</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+        <tr><td>Google Cloud Firestore</td><td>Support chat message storage</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+        <tr><td>Google AdMob</td><td>Advertising</td><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Link</a></td></tr>
+        <tr><td>Google User Messaging Platform (UMP)</td><td>Ad consent management</td><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Link</a></td></tr>
+        <tr><td>Unity Ads (mediation)</td><td>Advertising</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Link</a></td></tr>
+        <tr><td>Google Cast SDK</td><td>Casting to Chromecast/Google TV devices on your LAN</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+        <tr><td>Google Play In-App Updates</td><td>Prompts you to update the App via Google Play</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Link</a></td></tr>
       </tbody>
     </table>
-    <p>
-      DLNA and AirPlay casting (Section 3) use open local-network protocols and do not involve
-      a separate third-party SDK provider or server.
-    </p>
   </section>
 
-  <section id="consent">
-    <h2><span class="num">9.</span> Your consent choices (GDPR / UK / US)</h2>
-    <p>
-      If you are located in the European Economic Area, the United Kingdom, or Switzerland,
-      the App presents a consent form (via Google's UMP SDK) the first time you open it,
-      letting you choose whether to allow personalized advertising, non-personalized
-      advertising only, or to review partner-by-partner choices. This consent flow runs
-      regardless of whether ads are currently active (Section 6), so it's already in place if
-      ads are turned back on.
-    </p>
-    <p>
-      Where a consent form applies to your region, you can revisit and change your choice at
-      any time from within the App: <strong>Settings → Privacy Options</strong>. The App's
-      Privacy Policy link is always available in Settings regardless of your region.
-    </p>
-    <h3>In-app "Report a Bug" / Contact Support</h3>
-    <p>
-      The App's Settings screen includes a "Report a Bug"/support option. This opens the
-      in-app support chat described in Section 4 — see that section for exactly what's
-      collected and how long it's kept. An "email us instead" fallback is always available
-      from within the chat for anyone who'd rather not use it.
-    </p>
+  <section id="coppa">
+    <h2><span class="num">8.</span>Children's Privacy (COPPA)</h2>
+    <p>LG TV Remote is a general-audience utility app and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us at the address below so we can delete it.</p>
   </section>
 
-  <section id="no-account">
-    <h2><span class="num">10.</span> No accounts, no app-specific server</h2>
-    <p>
-      LG TV Remote does not require you to create an account, sign in, or provide your name,
-      email address, or phone number to use any feature of the App — including casting,
-      IPTV, and the support chat. There is no cloud backend <strong>operated by us</strong>
-      for the App's core TV-control functionality — the App does not sync your saved TVs,
-      playlists, cast library, or settings across devices, and we have no server-side database
-      of that data. Crash reports and (when active) usage analytics described in Section 7 are
-      sent directly to Google's Firebase infrastructure, not to any server we run ourselves.
-      IPTV streams and casting traffic go directly between your phone, your IPTV provider (for
-      streams you add), and your TV or casting target — never through us.
-    </p>
-    <p>
-      The one exception is the <strong>in-app support chat</strong> (Section 4): messages you
-      choose to send there are stored in Cloud Firestore, a Firebase database our support
-      staff can read and reply to. You are never required to use this feature, and it never
-      collects your name, email, or an account of any kind.
-    </p>
+  <section id="gdpr">
+    <h2><span class="num">9.</span>Your Rights Under GDPR (EU/EEA Users)</h2>
+    <p>If you are located in the European Economic Area, you have the right to access, correct, delete, restrict, or port your personal data, and to object to its processing, under the GDPR. Where processing relies on your consent (e.g., ad personalization via the UMP prompt), you may withdraw that consent at any time through the App's consent settings without affecting the lawfulness of processing carried out before withdrawal. Where processing relies on our legitimate interests (e.g., crash reporting, core analytics, and support diagnostics necessary to operate and secure the App), you may object as described above. To exercise these rights, contact us at the email below.</p>
+  </section>
+
+  <section id="ccpa">
+    <h2><span class="num">10.</span>Your Rights Under CCPA/CPRA (California Users)</h2>
+    <p>If you are a California resident, you have the right to know what personal information we collect, to request deletion of your personal information, and to not be discriminated against for exercising these rights. We do not sell your personal information for money. Depending on how California regulators classify advertising-identifier sharing with ad networks (Section 6), that activity may be considered a "share" for cross-context behavioral advertising under CPRA; you can opt out of this via your device's ad settings or the in-app consent tool described in Section 6. To exercise your rights, contact us at the email below.</p>
   </section>
 
   <section id="retention">
-    <h2><span class="num">11.</span> Data retention &amp; deletion</h2>
-    <p>
-      Because all app-specific data (saved devices, pairing credentials, IPTV playlists, cast
-      library references, and preferences) lives only in local storage on your device, it is
-      retained for as long as the App remains installed and is permanently deleted when you
-      uninstall the App or clear its storage. We have no ability to retain or recover this
-      data after that point, since we never received a copy of it.
-    </p>
-    <p>
-      Support chat messages (Section 4) are retained until we close the conversation, after
-      which they are scheduled for automatic deletion 7 days later unless a new message arrives
-      in the meantime, in which case the scheduled deletion is cancelled and the conversation
-      continues. Deleting a conversation deletes everything attached to it: the messages, the
-      technical snapshot, the analytics link (Section 7), and our internal notes and tags. If
-      you'd like a chat conversation deleted sooner, contact us using the details in Section 17
-      and we can remove it immediately.
-    </p>
-    <p>
-      Data collected by Firebase Crashlytics (Section 7), and by our advertising partners and
-      Analytics if/when active (Sections 6–7), is retained and deleted according to each
-      provider's own retention policies, linked in Section 8.
-    </p>
-  </section>
-
-  <section id="children">
-    <h2><span class="num">12.</span> Children's privacy</h2>
-    <p>
-      LG TV Remote is a general-audience utility app, not directed at children under the age of
-      13 (or the equivalent minimum age in your jurisdiction), and we do not knowingly collect
-      personal information from children. If you believe a child has provided us with
-      information, please contact us using the details in Section 17 so we can address it.
-    </p>
+    <h2><span class="num">11.</span>Data Retention</h2>
+    <ul>
+      <li><strong>Locally stored data</strong> (saved TVs, IPs, MAC addresses, pairing/auth tokens, app preferences) remains on your device only and is deleted when you uninstall the App or remove it in-app.</li>
+      <li><strong>Support chat data</strong> is retained in Firestore for as long as needed to resolve your inquiry and for a reasonable period afterward for quality/reference purposes; reinstalling the App creates a new anonymous identity and does not carry your prior thread forward.</li>
+      <li><strong>Analytics and crash data</strong> are retained according to Firebase's default retention settings (Google Analytics for Firebase data is generally retained for up to 14 months unless configured otherwise).</li>
+    </ul>
   </section>
 
   <section id="security">
-    <h2><span class="num">13.</span> Security</h2>
-    <p>
-      Communication between the App and your TVs happens over your local Wi-Fi network. Some
-      TV brands' native control protocols (e.g. LG webOS, Roku, Apple TV, and older Samsung
-      models) only support unencrypted local connections by design; this traffic never leaves
-      your local network and is never routed through the internet or through us. The same
-      local-network scope applies to casting and screen mirroring (Section 3): the App's local
-      media server is only reachable from devices on your own Wi-Fi network.
-    </p>
-    <p>
-      Pairing credentials, TLS certificate pins, and IPTV login details stored locally
-      (Sections 2 and 3) are kept within the App's private, sandboxed storage, which is not
-      accessible to other apps on your device under normal Android security policy, and is
-      excluded from cloud backup and device-to-device transfer. Crash reporting (Section 7) is
-      deliberately designed to exclude these credentials, along with PINs, MAC addresses, and
-      full IP addresses, from anything sent to Firebase. Support chat messages (Section 4) are
-      access-restricted to authorized BlueSpaceStudioz accounts.
-    </p>
-  </section>
-
-  <section id="rights">
-    <h2><span class="num">14.</span> Your rights (GDPR, CCPA &amp; other state laws)</h2>
-    <p>Depending on where you live, you may have rights to:</p>
-    <ul>
-      <li><strong>Access</strong> the categories of data collected about you by our diagnostic
-        (and, if active, advertising) partners, or a support chat conversation you sent us —
-        including the technical snapshot attached to it and any internal notes we added
-        (Section 4).</li>
-      <li><strong>Delete</strong> locally stored app data (including saved devices, playlists,
-        and cast library entries) at any time by removing them in-app, or by uninstalling the
-        App or clearing its storage; and request deletion of a support chat conversation as
-        described in Section 11.</li>
-      <li><strong>Opt out</strong> of personalized advertising and, where applicable under U.S.
-        state law, opt out of the "sale" or "sharing" of your information with advertising
-        partners, via the in-app Privacy Options (Section 9) and your device's ad settings —
-        relevant only once/if ads are re-enabled (Section 6).</li>
-      <li><strong>Object to or restrict</strong> processing carried out by our third-party
-        crash-reporting, analytics, and (if active) advertising partners, subject to their own
-        policies linked in Section 8.</li>
-    </ul>
-    <p>
-      Because we do not operate our own servers or hold a database of personal information
-      about you (other than a support chat conversation you chose to start, Section 4), most
-      data-subject requests regarding Firebase- or ad-related data should be directed to Google
-      and Unity directly using the links in Section 8, or to us at the contact below and we
-      will assist where we are able to.
-    </p>
+    <h2><span class="num">12.</span>Data Security</h2>
+    <p>We rely on the security controls provided by Google Firebase and Google/Unity's advertising infrastructure for any data that reaches our backend (support chat). Communication between the App and your TV happens over your local network; some TV brands' native control protocols (LG webOS, Roku, Apple TV, older Samsung models) only support unencrypted local connections, which is why the App permits cleartext traffic strictly for on-device-to-TV communication on your own LAN — this traffic never leaves your local network. No method of storage or transmission is 100% secure, but we take reasonable measures to protect information consistent with industry practice.</p>
   </section>
 
   <section id="transfers">
-    <h2><span class="num">15.</span> International data transfers</h2>
-    <p>
-      Our diagnostic and (if active) advertising partners (Google/Firebase, Unity) may process
-      data on servers located outside your country of residence, including in the United
-      States, under the safeguards described in their respective privacy policies. This
-      includes the Firebase infrastructure behind the in-app support chat (Section 4). Data
-      related to TV control, casting, screen mirroring, and IPTV stays on your local network
-      and is not transferred internationally by us.
-    </p>
+    <h2><span class="num">13.</span>International Data Transfers</h2>
+    <p>Firebase (Google), AdMob, and Unity Ads operate data centers globally, which means information they process (as described above) may be transferred to, stored, and processed in countries other than your own, including the United States. These providers maintain their own safeguards for such transfers (e.g., Standard Contractual Clauses), as described in their respective privacy policies linked in Section 7.</p>
   </section>
 
   <section id="changes">
-    <h2><span class="num">16.</span> Changes to this policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time — for example, when ads or analytics
-      are re-enabled, when we add a new mediation partner or diagnostic tool, or when a new
-      feature changes what data the App accesses. Material changes will be reflected by
-      updating the "Last updated" date at the top of this page. We encourage you to review this
-      page periodically.
-    </p>
+    <h2><span class="num">14.</span>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Material changes will be reflected by updating the "Last updated" date at the top of this document. Continued use of the App after changes take effect constitutes acceptance of the revised policy.</p>
   </section>
 
   <section id="contact">
-    <h2><span class="num">17.</span> Contact us</h2>
-    <p>
-      If you have questions about this Privacy Policy or how LG TV Remote handles data,
-      contact us at:
-    </p>
-    <p>
-      <strong>BlueSpaceStudioz</strong><br>
-      Email: <a href="mailto:bluespacestudioz.support@gmail.com">bluespacestudioz.support@gmail.com</a><br>
-      Or use the in-app support chat described in Section 4.
-    </p>
+    <h2><span class="num">15.</span>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or wish to exercise any of the rights described above, contact us at:</p>
+    <div class="contact-card">
+      <p style="margin:0 0 6px;"><strong>Email:</strong> <a href="mailto:bluespacestudioz.support@gmail.com">bluespacestudioz.support@gmail.com</a></p>
+      <p style="margin:0; color:var(--text-muted); font-size:0.92rem;">You can also reach us via the in-app "Report a Bug" / support chat feature.</p>
+    </div>
   </section>
 
-  <footer>
-    LG TV Remote — Privacy Policy · © 2026 BlueSpaceStudioz
-    <br>
-    <a class="back-top" href="#overview">↑ Back to top</a>
+  <a class="back-to-top" href="#top">↑ Back to top</a>
+
+  <footer class="appendix">
+    <h2>Assumptions &amp; Things to Verify</h2>
+    <ul>
+      <li><strong>Developer/company name</strong>: inferred from the in-app splash credit string "Powered by BlueSpaceStudioz". This may be a studio/brand name rather than a registered legal entity — confirm the correct legal name (and add a mailing address, if legally required in your target jurisdictions) before publishing.</li>
+      <li><strong>Ads are confirmed disabled in code</strong>, not just assumed: <code>PremiumManager.kt</code> hardcodes <code>isPremium = true</code> app-wide ("forced true for now to hide every ad surface&hellip; flip back to false when ads are re-enabled"), and <code>AdManager.kt</code> confirms <code>startAds()</code> never calls <code>MobileAds.initialize()</code> while this flag holds. Section 6 reflects this as a current-status callout plus forward-looking disclosure. <strong>If ads are re-enabled, revisit Sections 2.4 and 6</strong> to drop the "currently disabled" framing, and re-verify this against the Play Console Data Safety form, which must independently match actual runtime behavior at time of each release.</li>
+      <li><strong>AdMob App ID / ad unit IDs</strong> are injected at build time from <code>local.properties</code> and were not committed to the repo, so ad-unit-level detail could not be verified beyond what the manifest/Gradle files declare (banner, interstitial, app-open placeholders exist in the debug config).</li>
+      <li><strong>Firebase Analytics' default data-collection scope</strong> (e.g., whether automatic advertising-ID/IP-based location collection is left enabled or restricted) could not be verified from the manifest/code alone — confirm current Firebase console settings and UMP consent configuration match Sections 2.1 and 6.</li>
+      <li><strong>Play Billing</strong> is declared as a version in <code>libs.versions.toml</code> but is not actually wired into the app's dependencies or code — treated as not integrated. Re-check if in-app purchases are added later.</li>
+      <li><strong>Firebase Analytics retention period</strong> (14 months) is the platform default; confirm this hasn't been changed in the Firebase console for project <code>lgtvremote-f45a4</code>.</li>
+      <li><strong>CCPA "sale/share" classification</strong> of advertising-identifier sharing with ad networks is stated cautiously since this is a legal determination — have counsel confirm before publishing.</li>
+      <li>This document was generated from the current state of the codebase (manifest, Gradle files, and source under <code>app/src/main/java</code>) and does not reflect any privacy policy or terms hosted elsewhere for this app.</li>
+      <li><strong>Open item, not yet fixed</strong>: <code>SettingsScreen.kt</code> currently hard-codes the in-app "Privacy Policy" link to <code>https://bluebirdstudiozz-gif.github.io/omniremote-privacy/</code> &mdash; a different GitHub Pages site than this file. The correct/final URL will be provided later; <code>SettingsScreen.kt</code> needs to be updated to point at wherever this document ends up hosted before release.</li>
+    </ul>
   </footer>
 
 </div>
